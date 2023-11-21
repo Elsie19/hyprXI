@@ -3,7 +3,7 @@
 
 #### Dependencies
 * hyprland
-* hyprpaper
+* hyprpaper-bin
 * wlogout
 * swaylock
 * rofi
