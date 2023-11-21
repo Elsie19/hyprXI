@@ -1,9 +1,9 @@
 // Taken from https://github.com/GGORG0/dotfiles/blob/master/.config/waybar/config
+// Modified by @Elsie19
 {
     // --- GENERAL ---
     "layer": "top",
     "position": "top",
-    // --- LEFT MODULES ---
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/window"
@@ -20,7 +20,6 @@
             "default": ""
         }
     },
-    // --- CENTER MODULES ---
     "modules-center": [
         "clock"
     ],
@@ -41,9 +40,8 @@
                 "weekdays": "<span color='#ffb86c'><b>{}</b></span>",
                 "today": "<span color='#ff79c6'><b><u>{}</u></b></span>"
             }
-        },
+        }
     },
-    // --- RIGHT MODULES ---
     "modules-right": [
         "network",
         "idle_inhibitor",
@@ -149,16 +147,14 @@
         ],
         "tooltip-format": "{capacity}%\n{timeTo}\n{power} W"
     },
-    // ---
     "tray": {
         "icon-size": 15,
         "spacing": 10
     },
-    // ---
     "custom/lock": {
         "tooltip": false,
         "on-click": "swaylock",
-        "format": "",
+        "format": ""
     },
     "custom/power": {
         "tooltip": false,
