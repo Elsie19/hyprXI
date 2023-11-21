@@ -10,10 +10,14 @@
     ],
     "hyprland/workspaces": {
         "sort-by-name": true,
-        "format": "{id}",
+        "format": "{icon}",
         "show-special": true,
         "persistent_workspaces": {
             "*": 10
+        },
+        "format-icons": {
+            "active": "",
+            "default": ""
         }
     },
     // --- CENTER MODULES ---
