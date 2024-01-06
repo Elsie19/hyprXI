@@ -7,7 +7,7 @@
 * swaylock (apt)
 * rofi (apt)
 * waybar (apt)
-* alacritty (pacstall/apt)
+* alacritty (pacstall/apt >=0.12.3)
 * lightpad (apt)
 * xwayland (apt)
 * Nerd font (manual)
