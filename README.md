@@ -9,6 +9,7 @@
 * waybar (apt)
 * alacritty (pacstall/apt)
 * lightpad (apt)
+* xwayland (apt)
 * Nerd font (manual)
 
 #### Keybindings
