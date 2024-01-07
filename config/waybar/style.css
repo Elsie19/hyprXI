@@ -143,14 +143,12 @@
 /*---*/
 
 #tray {
-    margin-right: 0.75rem;
-    border-radius: 0px 1rem 1rem 0px;
+    color: @text;
 }
 
 /* --- */
 
 #custom-lock {
-    border-radius: 1rem 0px 0px 1rem;
     color: @text;
 }
 
