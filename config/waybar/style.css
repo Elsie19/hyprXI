@@ -36,7 +36,6 @@
     color: @text;
 }
 
-#window,
 #clock,
 #network,
 #pulseaudio,
@@ -90,12 +89,6 @@
 #workspaces button:hover {
     color: @blue;
     background: @surface0;
-}
-
-#window {
-    border-radius: 1rem 0px 0px 1rem;
-    background-color: @surface0;
-    margin-right: 1rem;
 }
 
 /* --- CENTER MODULES --- */
