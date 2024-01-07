@@ -33,7 +33,7 @@
     ],
     "clock": {
         "interval": 1,
-        "format": "<span color=\"#ff5555\"></span> {:%H:%M:%S}",
+        "format": "<span color='#ff5555'></span> {:%H:%M:%S}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "year",
@@ -66,11 +66,11 @@
         "format-ethernet": " {ipaddr}",
         "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "<span color=\"#ff5555\">⚠</span> Disconnected",
+        "format-disconnected": "<span color='#ff5555'>⚠</span> Disconnected",
         "on-click": "nm-connection-editor"
     },
     "pulseaudio": { // TODO: replace with wireplumber
-        "format": "<span color=\"#8be9fd\">{icon}</span> {volume}%",
+        "format": "<span color='#8be9fd'>{icon}</span> {volume}%",
         "format-bluetooth": "{icon} {volume}%",
         "format-bluetooth-muted": " {icon}",
         "format-icons": {
@@ -90,12 +90,12 @@
     },
     "cpu": {
         "interval": 2,
-        "format": "<span color=\"#f1fa8c\"></span> {usage}%",
+        "format": "<span color='#f1fa8c'></span> {usage}%",
         "on-click": "alacritty htop"
     },
     "memory": {
         "interval": 2,
-        "format": "<span color=\"#50fa7b\"></span> {used}",
+        "format": "<span color='#50fa7b'></span> {percentage}%",
         "on-click": "alacritty htop"
     },
     "battery": {
@@ -107,11 +107,11 @@
         },
         "format": "{icon}  {capacity}%",
         "format-icons": [
-            "<span color=\"#ff5555\"></span>",
-            "<span color=\"#ffb86c\"></span>",
-            "<span color=\"#f1fa8c\"></span>",
-            "<span color=\"#50fa7b\"></span>",
-            "<span color=\"#50fa7b\"></span>"
+            "<span color='#ff5555'></span>",
+            "<span color='#ffb86c'></span>",
+            "<span color='#f1fa8c'></span>",
+            "<span color='#50fa7b'></span>",
+            "<span color='#50fa7b'></span>"
         ],
         "tooltip-format": "{capacity}%\n{timeTo}\n{power} W"
     },
