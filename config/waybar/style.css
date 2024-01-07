@@ -1,9 +1,9 @@
 /* Taken from https://github.com/GGORG0/dotfiles/tree/master/.config/waybar */
-@define-color base   #1e1e2e;
+@define-color base #1e1e2e;
 @define-color mantle #181825;
-@define-color crust  #11111b;
+@define-color crust #11111b;
 
-@define-color text     #f8f8f2;
+@define-color text #f8f8f2;
 @define-color subtext0 #a6adc8;
 @define-color subtext1 #bac2de;
 
@@ -15,171 +15,154 @@
 @define-color overlay1 #7f849c;
 @define-color overlay2 #9399b2;
 
-@define-color blue      #8be9fd;
-@define-color purple    #bd93f9;
-@define-color green     #50fa7b;
-@define-color yellow    #f1fa8c;
-@define-color orange    #ffb86c;
-@define-color red       #ff5555;
-@define-color pink      #ff79c6;
+@define-color blue #8be9fd;
+@define-color purple #bd93f9;
+@define-color green #50fa7b;
+@define-color yellow #f1fa8c;
+@define-color orange #ffb86c;
+@define-color red #ff5555;
+@define-color pink #ff79c6;
 
 /* --- GENERAL --- */
 * {
-  font-family: Fira Code Nerd Font;
-  font-size: 13px;
-  min-height: 0;
+    font-family: Fira Code Nerd Font;
+    font-weight: bold;
+    font-size: 13px;
+    min-height: 0;
 }
 
 #waybar {
-  background: transparent;
-  color: @text;
+    background: transparent;
+    color: @text;
 }
 
 #window,
 #clock,
 #network,
-#idle_inhibitor,
 #pulseaudio,
 #cpu,
 #memory,
-#temperature,
-#backlight,
 #battery,
 #custom-updates,
 #custom-dunst,
 #tray,
 #custom-lock,
 #custom-power {
-  background-color: @surface0;
-  padding: 0.5rem 0.75rem;
-  margin: 5px 0;
+    background-color: @surface0;
+    padding: 0.5rem 0.75rem;
+    margin: 5px 0;
 }
 
 /* --- LEFT MODULES --- */
 
 #workspaces {
-  border-radius: 1rem 0px 0px 1rem;
+    border-radius: 1rem 0px 0px 1rem;
 
-  margin: 5px 0 5px 5px;
-  padding-left: 0.3rem;
-  background-color: @surface0;
+    margin: 5px 0 5px 5px;
+    padding-left: 0.3rem;
+    background-color: @surface0;
 }
 
 #workspaces button {
-  color: @purple;
-  background-color: transparent;
-  border-radius: 2rem;
-  padding: 0.25rem;
-  margin: 0.3rem 0;
+    color: @text;
+    background-color: transparent;
+    border-radius: 2rem;
+    padding: 0.25rem;
+    margin: 0.3rem 0;
 
-  transition: color 0.5s, background-color 0.5s;
+    transition: color 0.5s, background-color 0.5s;
 }
 
 #workspaces button.empty {
-  color: @overlay0;
+    color: @overlay0;
 }
 
 #workspaces button.special {
-  color: @pink;
+    color: @pink;
 }
 
 #workspaces button.active {
-  color: @blue;
-  background-color: @surface1;
+    border-bottom: 2px solid @pink;
+    color: @blue;
+    background-color: @surface0
 }
 
 #workspaces button:hover {
-  color: @blue;
-  background-color: @surface2;
+    color: @blue;
+    background: @surface0;
 }
 
 #window {
-  border-radius: 1rem 0px 0px 1rem;
-  background-color: @surface0;
-  margin-right: 1rem;
+    border-radius: 1rem 0px 0px 1rem;
+    background-color: @surface0;
+    margin-right: 1rem;
 }
 
 /* --- CENTER MODULES --- */
 
 #clock {
-  border-radius: 1rem;
-  color: @blue;
+    border-radius: 1rem;
+    color: @text;
 }
 
 /* --- RIGHT MODULES --- */
 
 #network {
-  color: @green;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
-}
-
-#idle_inhibitor.deactivated {
-  color: @orange;
-}
-
-#idle_inhibitor.activated {
-  color: @green;
+    color: @text;
+    border-radius: 1rem 0px 0px 1rem;
+    margin-left: 1rem;
 }
 
 #pulseaudio {
-  color: @red;
+    color: @text;
 }
 
 #cpu {
-  color: @purple;
+    color: @text;
 }
 
 #memory {
-  color: @orange;
-}
-
-#temperature {
-  color: @pink;
-}
-
-#backlight {
-  color: @yellow;
+    color: @text;
 }
 
 #battery {
-  color: @green;
+    color: @text;
 }
 
 #battery.charging {
-  color: @green;
+    color: @text;
 }
 
 #battery.warning:not(.charging) {
-  color: @red;
+    color: @text;
 }
 
 #custom-updates {
-  color: @red;
+    color: @text;
 }
 
 #custom-dunst {
-  margin-right: 0.75rem;
-  border-radius: 0px 1rem 1rem 0px;
-  color: @blue;
+    margin-right: 0.75rem;
+    border-radius: 0px 1rem 1rem 0px;
+    color: @text;
 }
 
 /*---*/
 
 #tray {
-  margin-right: 0.75rem;
-  border-radius: 0px 1rem 1rem 0px;
+    margin-right: 0.75rem;
+    border-radius: 0px 1rem 1rem 0px;
 }
 
 /* --- */
 
 #custom-lock {
-  border-radius: 1rem 0px 0px 1rem;
-  color: @purple;
+    border-radius: 1rem 0px 0px 1rem;
+    color: @text;
 }
 
 #custom-power {
-  margin: 5px 5px 5px 0;
-  border-radius: 0px 1rem 1rem 0px;
-  color: @red;
+    margin: 5px 5px 5px 0;
+    border-radius: 0px 1rem 1rem 0px;
+    color: @text;
 }

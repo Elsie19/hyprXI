@@ -6,18 +6,42 @@
     "position": "top",
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/window"
+        "wlr/taskbar"
     ],
     "hyprland/workspaces": {
         "sort-by-name": true,
         "format": "{icon}",
         "show-special": true,
         "persistent_workspaces": {
-            "*": 10
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
         },
         "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
             "active": "",
-            "default": ""
+            "default": ""
+        }
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 18,
+        "icon-theme": "Papirus-Dark",
+        "spacing": 0,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "Alacritty"
+        ],
+        "app_ids-mapping": {
+            "firefoxdeveloperedition": "firefox-developer-edition"
         }
     },
     "modules-center": [
@@ -25,7 +49,7 @@
     ],
     "clock": {
         "interval": 1,
-        "format": " {:%H:%M:%S %d %b}",
+        "format": "<span color=\"#ff5555\"></span> {:%H:%M:%S}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "year",
@@ -44,40 +68,27 @@
     },
     "modules-right": [
         "network",
-        "idle_inhibitor",
         "pulseaudio",
         "cpu",
         "memory",
-        "temperature",
-        "backlight",
         "battery",
         "tray",
         "custom/lock",
         "custom/power"
     ],
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "  {essid}",
         "tooltip-format-wifi": "{ifname}: {ipaddr}/{cidr}\n{essid} on {frequency}GHz",
-        "format-ethernet": "{ipaddr} ",
+        "format-ethernet": " {ipaddr}",
         "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-disconnected": "<span color=\"#ff5555\">⚠</span> Disconnected",
         "on-click": "nm-connection-editor"
     },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
     "pulseaudio": { // TODO: replace with wireplumber
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format": "<span color=\"#8be9fd\">{icon}</span> {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": " {icon}",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -94,34 +105,14 @@
         "on-click": "pavucontrol"
     },
     "cpu": {
-        "interval": 10,
-        "format": "{usage}% ",
+        "interval": 2,
+        "format": "<span color=\"#f1fa8c\"></span> {usage}%",
         "on-click": "alacritty htop"
     },
     "memory": {
-        "interval": 10,
-        "format": "{}% ",
+        "interval": 2,
+        "format": "<span color=\"#50fa7b\"></span> {used}",
         "on-click": "alacritty htop"
-    },
-    "temperature": {
-        "interval": 30,
-        "critical-threshold": 80,
-        "format": "{temperatureC}°C ",
-        "on-click": "alacritty htop"
-    },
-    "backlight": {
-        "format": "{percent}% {icon}",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
     },
     "battery": {
         "interval": 60,
@@ -130,20 +121,13 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󰂄",
-        "format-plugged": "{capacity}% ",
+        "format": "{icon}  {capacity}%",
         "format-icons": [
-            "󱃍",
-            "󱃍",
-            "󰁻",
-            "󰁼",
-            "󰁽",
-            "󰁾",
-            "󰁿",
-            "󰂀",
-            "󰂁",
-            "󰁹"
+            "<span color=\"#ff5555\"></span>",
+            "<span color=\"#ffb86c\"></span>",
+            "<span color=\"#f1fa8c\"></span>",
+            "<span color=\"#50fa7b\"></span>",
+            "<span color=\"#50fa7b\"></span>"
         ],
         "tooltip-format": "{capacity}%\n{timeTo}\n{power} W"
     },
