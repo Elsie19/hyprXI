@@ -10,7 +10,7 @@
 * alacritty (pacstall/apt >=0.12.3)
 * lightpad (apt)
 * xwayland (apt)
-* Nerd font (manual)
+* Fira Code Nerd Font Normal & Bold (manual)
 
 #### Keybindings
 
